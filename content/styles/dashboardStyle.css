@@ -1,0 +1,143 @@
+#main
+{
+   padding-top: 10px;
+    border-bottom: thin solid #ccc;
+    
+}
+#left
+{
+    float: left;
+      width: 20%;
+}
+#right
+{
+    float: left;
+    width: 70%;
+    margin-left: 50px;
+    min-height: 400px;
+}
+
+#right table tr td
+{
+   padding: 10px;
+}
+#right input[type="text"] 
+{
+    width: 250px;
+   
+    
+}
+
+#right textarea
+{
+    height: 100px;
+    width: 255px;
+    resize: none;
+   
+}
+
+#navigation
+{
+    border-right: solid thin #ccc;
+    width: 100%;
+   // margin-top: -25px;
+}
+
+#navigation ul
+{
+    
+   margin-top: 0px;
+}
+#navigation ul li
+{
+   list-style: none; 
+   display: inline-block;
+   margin-bottom: 10px;
+   margin-top: 8px;
+     width: 100%;
+        font-size:16px;
+}
+
+#navigation ul li a
+{
+    text-decoration: none;
+    color: #4F5155;
+}
+
+#navigation ul li 
+{
+    margin-top: -3px;
+}
+
+
+#form
+{
+    font-size:14px; 
+     margin-left: 20px;
+}
+
+#alignright
+{
+    text-align: right;
+    font-size: 16px;
+}
+
+
+#help{
+    font-weight: bolder;
+   
+    text-decoration: none;
+    padding: 0px 7px;
+    border-bottom-left-radius:10px; 
+    border-bottom-right-radius:10px;
+    background: #666666;
+    border-top-left-radius:10px; 
+    border-top-right-radius:10px;
+    color: white;
+}
+
+#adds, #subs
+{
+    width: 20px;
+    text-align: center;
+    padding-bottom: 3px;
+}
+
+#sucess
+{
+ 
+    font-weight: bold;
+    padding: 5px;
+    
+}
+
+#clear
+{
+    clear: both;
+}
+
+#room_book
+{
+ margin: 0px;   
+}
+
+#room_book th
+{
+  text-align: left;
+  border-bottom: solid thin #ccc;
+}
+
+
+#room_book table tr td
+{
+   text-align: left;
+}
+
+#edit_room:hover 
+{
+    border: solid thin #ccc;
+}
+#delete_room:hover
+{
+    border: solid thin #ccc;
+}
