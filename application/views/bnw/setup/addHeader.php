@@ -23,7 +23,7 @@ if ($query)
 
 <h2> Header Content Management</h2>
 <hr class="hr-gradient"/>
-<?php echo form_open_multipart('bnw/headerupdate');?>
+<?php echo form_open_multipart('setting/headerupdate');?>
  
 
     <p>Header Title :<br />
@@ -33,7 +33,7 @@ if ($query)
   
   <p>Existing Header Logo : <br/>
   <div style="width: 125px; height: 125px;">
-      <img src="<?php echo base_url().'content/uploads/images/'.$set_data[1]; ?>" style="width: 125px; height: 125px;">
+      <img src="<?php echo base_url().'contents/uploads/images/'.$set_data[1]; ?>" style="width: 125px; height: 125px;">
   </div>
       
       </p>       

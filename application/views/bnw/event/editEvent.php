@@ -1,7 +1,7 @@
-<link rel="stylesheet" href="<?php echo base_url().'content/uploads/scripts/date.css';?>">
-<script src="<?php echo base_url().'content/uploads/scripts/jquery-1.10.2.js'; ?>"></script>
+<link rel="stylesheet" href="<?php echo base_url().'contents/uploads/scripts/date.css';?>">
+<script src="<?php echo base_url().'contents/uploads/scripts/jquery-1.10.2.js'; ?>"></script>
 
- <script src="<?php echo base_url() . 'content/uploads/scripts/jquery-ui.js'; ?>" type="text/javascript"></script>
+ <script src="<?php echo base_url() . 'contents/uploads/scripts/jquery-ui.js'; ?>" type="text/javascript"></script>
  <script>
   $(function() {
 $( "#datepicker" ).datepicker();
@@ -43,7 +43,7 @@ $( "#datepicker" ).datepicker();
   <p id="sucessmsg">
   <?php echo $this->session->flashdata('message'); ?>
     </p>
-  <?php echo form_open_multipart('bnw/update_event');?>
+  <?php echo form_open_multipart('events/update_event');?>
   <p>Name:<br />
       <input type="hidden" name="id" value="<?php echo $id; ?>" >
       <input type="text" name="Name" value="<?php echo $name; ?>" />
@@ -59,10 +59,10 @@ $( "#datepicker" ).datepicker();
    
   <?php if($image==!NULL) { ?> <div  >
     <div style="width:85px; height: 85px;">
-    <img src="<?php echo base_url()."content/uploads/images/".$image; ?>" width="80" height="80" alt="<?php echo $image; ?>"/>
+    <img src="<?php echo base_url()."contents/uploads/images/".$image; ?>" width="80" height="80" alt="<?php echo $image; ?>"/>
     </div>
-             <a href="<?php echo base_url();?>index.php/bnw/Imgdelete/?id=<?php echo $id; ?> " id="<?php echo $id; ?>" class="delbutton">
-        <img src="<?php echo base_url();?>content/uploads/images/delete.png" id="close"/></a>
+             <a href="<?php echo base_url();?>index.php/events/Imgdelete/?id=<?php echo $id; ?> " id="<?php echo $id; ?>" class="delbutton">
+        <img src="<?php echo base_url();?>contents/bnw/images/delete.png" id="close"/></a>
     </div> <?php }?>
   
   <input type="hidden" name="hidden_image" value="<?php echo $data->image; ?>" />

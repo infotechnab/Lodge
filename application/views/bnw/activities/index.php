@@ -29,7 +29,7 @@
                     $image = 'Image not set'; ?>
             <td> <?php echo $image; ?></td>
               <?php   } else {
-?><td><img src="<?php echo base_url();?>uploads/<?php echo $image;?>" widht="50px" height="50px" />  </td> <?php } ?>
+?><td><img src="<?php echo base_url();?>contents/uploads/images/<?php echo $image;?>" widht="50px" height="50px" />  </td> <?php } ?>
             <td><?php echo anchor('bnw/editactivities/'.$data->id,'Edit') ?> / <?php echo anchor('bnw/deleteactivities/'.$data->id,'Delete') ?></td>
       
         </tr>

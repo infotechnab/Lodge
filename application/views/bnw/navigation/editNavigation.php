@@ -23,7 +23,7 @@
   <p id="sucessmsg">
   <?php echo $this->session->flashdata('message'); ?>
     </p>
-  <?php echo form_open_multipart('bnw/updatenavigation');?>
+  <?php echo form_open_multipart('dashboard/updatenavigation');?>
   <p>Title:<br />
       <input type="hidden" name="id" value="<?php echo $id; ?>" >
       <input type="text" name="navigation_name" value="<?php echo $name; ?>" />

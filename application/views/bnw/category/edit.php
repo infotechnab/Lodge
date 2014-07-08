@@ -20,7 +20,7 @@
   <p id="sucessmsg">
   <?php echo $this->session->flashdata('message'); ?>
     </p>
-  <?php echo form_open_multipart('bnw/updatecategory');?>
+  <?php echo form_open_multipart('dashboard/updatecategory');?>
   <p>Name:<br />
        <input type="hidden" name="id" value="<?php echo $id; ?>" >
   <input type="text" name="category_name" value="<?php echo $categoryname; ?>" />

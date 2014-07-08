@@ -32,7 +32,7 @@ class room_booking extends CI_Controller {
         
         function post_action()
         {   
-             $this->load->helper('availableRoom');
+           $this->load->helper('availableRoom');
              
             $data['abc']=array(
             'checkin' => $_POST['checkin'],

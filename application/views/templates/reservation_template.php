@@ -1,76 +1,11 @@
  <div id="checkInOut">
-            
-            
-           
-         
-         
-       
-
-
-        
-<script src="<?php echo base_url().'content/scripts/datepicker.js' ?>"></script>
-<link rel="stylesheet" type="text/css" href="<?php echo base_url().'content/styles/tableStyles.css';?> " />
+<script src="<?php echo base_url().'contents/uploads/scripts/datepicker.js' ?>"></script>
+<link rel="stylesheet" type="text/css" href="<?php echo base_url().'contents/uploads/styles/tableStyles.css';?> " />
+<link rel="stylesheet" type="text/css" href="<?php echo base_url().'contents/uploads/styles/tableStyles.css';?> " />
+<script src="<?php echo base_url() . "contents/uploads/scripts/apiCheckin.js"; ?>"></script>
 
 <script>
-$(document).ready(function(){
-   var replaced = $("#changePopup").html();
-    $("#closePopup").click(function(){
-        $("#changePopup").html(replaced);
-         });
-         
-    
-    $("#checkinbtn").click(function(){
-         $(".middleLayer").show();
-         $(".popup").show();
-        
-   loading(); // loading
-	            setTimeout(function(){ // then show popup, deley in .1 second
-	closeloading();
-        path();
-         $('#one').css({'background-color': '#0077b3'}); 
-         $('.first').css({'color': '#0077b3'}); 
-         $('.first').css({'font-weight': 'bold'});
-         
-      
-        changeFunc(); // function show popup
-	            }, 1000); // .1 second
-	    
-     
-    });
-    });
-</script>
-
-
-<script type="text/javascript">
-    
-  function changeFunc() {
-      
-      var checkin = $("#CheckIn").val();
-      var checkout = $("#CheckOut").val();
-     var adult = $("#adult").val();
-      var child = $("#child").val();
- $.ajax({
- type: "POST",
- url: "<?php echo base_url().'index.php/room_booking/post_action' ;?>",
- data: {
-     'checkin' : checkin,
-     'checkout' : checkout,
-     'adult' : adult,
-     'child' : child,
-     'hotelId':"1"
-        },
-  success: function(msg) 
-        {
-            
-            
-            $("#replaceMe").html(msg);
-            
-            
-        }
- });
- 
- }
-    $(document).ready(function(){   
+ $(document).ready(function(){   
         //close popup.
         $("#closePopup").click(function(){
            $("#pop_up").hide();
@@ -108,13 +43,21 @@ function displaytime(){
 		}
 }
 setInterval("displaytime()", 1000);
+
+function movecursor() {
+    $("#CheckIn").focus();
+}
+function movecursornext() {
+    $("#CheckOut").focus();
+}
+  
+
  </script>
     
     <?php
         $adultsNumber = 5;
         $children = 5;
         ?>
- 
 <div id="container">
     
 	<div id="body">
@@ -129,7 +72,7 @@ setInterval("displaytime()", 1000);
                       <div class="input-prepend input-append">
                 <span class="add-on">Check In</span>
                 <input name="CheckIn" type="text" required="required" style="width:185px; cursor:pointer;" id="CheckIn">
-                <span class="add-on" style="width:auto; "><img src='<?php echo base_url().'content/images/ParkReserve.png' ;?>' style="width: 15px; height: 20px;" ></span>
+                <span onclick="movecursor()" class="add-on" style="width:auto; cursor:pointer; "><img src='<?php echo base_url().'contents/uploads/images/ParkReserve.png' ;?>' style="width: 15px; height: 20px;" ></span>
                 </div> 
                     </td>
                     
@@ -158,7 +101,7 @@ setInterval("displaytime()", 1000);
                 <div class="input-prepend input-append">
                 <span class="add-on">Check Out</span>
                 <input name="CheckOut" type="text" style="width:185px; cursor:pointer;" id="CheckOut" value=""  required="required">
-                <span class="add-on" style="width:auto;"><img src='<?php echo base_url().'content/images/ParkReserve.png' ;?>' style="width: 15px; height: 20px;" ></span>
+                <span onclick="movecursornext()" class="add-on" style="width:auto; cursor:pointer;"><img src='<?php echo base_url().'contents/uploads/images/ParkReserve.png' ;?>' style="width: 15px; height: 20px;" ></span>
                 </div>
                     </td>
                     
@@ -179,8 +122,8 @@ setInterval("displaytime()", 1000);
                              </div>
                     </td>
                     <td style="margin-top:-15px;">
-                      <input type ="button" value="Submit" style="margin-top:-25px;" id="checkinbtn">
-<!--                       <input type ="button" value="Submit" style="margin-top:-25px;" onClick="javascript:changeFunc();">-->
+                        <input type ="button" value="Submit" style="margin-top:-25px;" id="checkinbtn">
+                      
                     </td>
             </table>
         </form>
@@ -196,7 +139,7 @@ setInterval("displaytime()", 1000);
 
 <!-- ================================================================================================
 =============================================================================================== -->
- </div>
+
 <!-- booking -->
 
 <div class="popup" id="pop_up"style="display: none">
@@ -225,7 +168,7 @@ setInterval("displaytime()", 1000);
     border: 0; border-top: 1px solid #ccc; padding: 0; margin-top: 18px;">
     </div>
     
-    <div id="loading"> <img width="30" src="<?php echo base_url().'content/images/page-loader.gif' ; ?>" alt="loading.."/><br><b>Loading...</b></div>
+    <div id="loading"> <img width="30" src="<?php echo base_url().'contents/uploads/images/page-loader.gif' ; ?>" alt="loading.."/><br><b>Loading...</b></div>
     <div id="replaceMe">
         
     </div>
@@ -245,4 +188,4 @@ setInterval("displaytime()", 1000);
 if(isset($xyz))
 echo $xyz;
 
-?>
+?></div>

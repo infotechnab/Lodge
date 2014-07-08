@@ -2,10 +2,10 @@
  <h2>Add new Event</h2>
  <hr class="hr-gradient"/>
   <?php echo validation_errors(); ?>
- <link rel="stylesheet" href="<?php echo base_url().'content/uploads/scripts/date.css';?>">
-<script src="<?php echo base_url().'content/uploads/scripts/jquery-1.10.2.js'; ?>"></script>
+ <link rel="stylesheet" href="<?php echo base_url().'contents/uploads/scripts/date.css';?>">
+<script src="<?php echo base_url().'contents/uploads/scripts/jquery-1.10.2.js'; ?>"></script>
 
- <script src="<?php echo base_url() . 'content/uploads/scripts/jquery-ui.js'; ?>" type="text/javascript"></script>
+ <script src="<?php echo base_url() . 'contents/uploads/scripts/jquery-ui.js'; ?>" type="text/javascript"></script>
  <script>
   $(function() {
 $( "#datepicker" ).datepicker();
@@ -14,7 +14,7 @@ $( "#datepicker" ).datepicker();
   <p id="sucessmsg">
   <?php if($this->session->flashdata('message')){echo $this->session->flashdata('message');}?>
     </p>
-  <?php echo form_open_multipart('bnw/addevent');?>
+  <?php echo form_open_multipart('events/addevent');?>
       
  <p>Name:<br />
       <input type="text" name="event_name" value="<?php echo set_value('event_name'); ?>"  /> </p> 

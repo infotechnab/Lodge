@@ -2,9 +2,6 @@
 <div class="rightSide">
 
 <div id="body">
-     <p style="color: red;">
-            <?php if(isset($token_error)){ echo $token_error;} ?>
-        </p>
     <p id="sucessmsg">
   <?php if($this->session->flashdata('message')){echo $this->session->flashdata('message');}?>
     </p>
@@ -19,7 +16,9 @@
             <th>Title</th> 
             <th>Link</th>
             <th>Parent</th>
-                    
+            <th>Type</th>
+            <th>Navigation Slug</th>
+            
             <th>Action</th>
         </tr>
     
@@ -32,9 +31,11 @@
             <td><?php echo $data->navigation_name; ?></td>
             <td><?php echo $data->navigation_link; ?>  </td>
             <td><?php echo $data->parent_id; ?>  </td>
-          
-            <td><?php echo anchor('bnw/up/'.$data->id,'<img title="move up" src="'.base_url().'content/bnw/images/up.png" width="15" height="15" />'); ?> | 
-            <?php echo anchor('bnw/down/'.$data->id,'<img title="move down " src="'.base_url().'content/bnw/images/down.png" width="15" height="15" />'); ?></td>
+            <td><?php echo $data->navigation_type; ?>  </td>
+            <td><?php echo $data->navigation_slug; ?>  </td>
+            
+            <td><?php echo anchor('dashboard/editnavigation/'.$data->id,'Edit'); ?> / 
+            <?php echo anchor('dashboard/deletenavigation/'.$data->id,'Delete'); ?></td>
         </tr>
             <?php    
             }

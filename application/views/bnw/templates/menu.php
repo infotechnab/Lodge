@@ -4,51 +4,51 @@
                         <li class="mainMenuItem"> <a href="#">Dashboard</a>
                         <ul class="subMenu">                            
                             <li><?php echo anchor('bnw', 'Home') ?></li>
-                            <li><?php echo anchor('bnw/addmenu', 'Add Menu') ?></li>
-                            <li><?php echo anchor('bnw/navigation', 'Navigation') ?></li>
-                            <li><?php echo anchor('bnw/category', 'Categories') ?></li>
+                            <li><?php echo anchor('dashboard/addmenu', 'Add Menu') ?></li>
+                            <li><?php echo anchor('dashboard/navigation', 'Navigation') ?></li>
+                            <li><?php echo anchor('dashboard/category', 'Categories') ?></li>
                         </ul>
                     </li>
                     
 <!--                    <li class="mainMenuItem"> <a href="#">Product</a>
                         <ul class="subMenu">
-                            <li><?php echo anchor('bnw/product', 'Add New Product') ?></li>
-                            <li><?php echo anchor('bnw/productList', 'Products') ?></li>
-                           <li><?php echo anchor('bnw/disproduct', 'Sold Info') ?></li>
-                            <li><?php echo anchor('bnw/productShipping', 'Shipping ') ?></li>
-                            <li><?php echo anchor('bnw/coupon', 'Create Coupon ') ?></li>
+                            <li><?php //echo anchor('bnw/product', 'Add New Product') ?></li>
+                            <li><?php //echo anchor('bnw/productList', 'Products') ?></li>
+                           <li><?php //echo anchor('bnw/disproduct', 'Sold Info') ?></li>
+                            <li><?php //echo anchor('bnw/productShipping', 'Shipping ') ?></li>
+                            <li><?php //echo anchor('bnw/coupon', 'Create Coupon ') ?></li>
                             
                         </ul>
                     </li>-->
                     <li class="mainMenuItem"><a href="#">Events</a>
                         <ul class="subMenu">
-                            <li><?php echo anchor('bnw/event', 'All Event') ?></li>
-                            <li><?php echo anchor('bnw/addevent', 'Add New Event') ?></li>
+                            <li><?php echo anchor('events/event', 'All Event') ?></li>
+                            <li><?php echo anchor('events/addevent', 'Add New Event') ?></li>
                         </ul>
                     </li>
                     <li class="mainMenuItem"><a href="#">Offers</a>
                         <ul class="subMenu">
-                            <li><?php echo anchor('bnw/posts', 'All Offers') ?></li>
-                            <li><?php echo anchor('bnw/addpost', 'Add New Offer') ?></li>
+                            <li><?php echo anchor('offers/posts', 'All Offers') ?></li>
+                            <li><?php echo anchor('offers/addpost', 'Add New Offer') ?></li>
                         </ul>
                     </li>
                     <li class="mainMenuItem"><a href="#">Pages</a>
                         <ul class="subMenu">
-                            <li><?php echo anchor('bnw/pages', 'All Pages') ?></li>
-                            <li><?php echo anchor('bnw/addpage', 'Add New') ?></li>                            
+                            <li><?php echo anchor('page/pages', 'All Pages') ?></li>
+                            <li><?php echo anchor('page/addpage', 'Add New') ?></li>                            
                         </ul>
                     </li>
                     <li class="mainMenuItem"><a href="#">Users</a>
                         <ul class="subMenu">
-                            <li><?php echo anchor('bnw/adduser', 'Add New') ?></li>
-                            <li><?php echo anchor('bnw/users', 'All Users') ?></li>
-                            <li><?php echo anchor('bnw/profile', 'My Profile') ?></li>
+                            <li><?php echo anchor('user/adduser', 'Add New') ?></li>
+                            <li><?php echo anchor('user/users', 'All Users') ?></li>
+                            <li><?php echo anchor('user/profile', 'My Profile') ?></li>
                         </ul>
                     </li>
                    <li class="mainMenuItem"><a href="#">Media</a>
                         <ul class="subMenu">
-                            <li><?php echo anchor('bnw/media', 'Library') ?></li>
-                            <li><?php echo anchor('bnw/addmedia', 'Add New') ?></li>                           
+                            <li><?php echo anchor('album/media', 'Library') ?></li>
+                            <li><?php echo anchor('album/addmedia', 'Add New') ?></li>                           
                         </ul>
                     </li>
                     <li class="mainMenuItem"><a href="#">Social Share</a>
@@ -59,29 +59,29 @@
                     </li>
                     <li class="mainMenuItem"><a href="#">Settings</a>
                         <ul class="subMenu">
-                            <li><?php echo anchor('bnw/header', 'Header') ?></li>
-                           <!-- <li><?php// echo anchor('bnw/sidebar', 'Sidebar') ?></li>
-                            <li><?php //echo anchor('bnw/miscsetting', 'Miscellaneous Setting') ?></li>
-                            <li><?php //echo anchor('gadgets', 'Gadgets') ?></li> -->
+                            <li><?php echo anchor('setting/header', 'Header') ?></li>
+                            <li><?php echo anchor('setting/sidebar', 'Sidebar') ?></li>
+                            <li><?php echo anchor('setting/miscsetting', 'Miscellaneous Setting') ?></li>
+                            <li><?php echo anchor('gadgets', 'Gadgets') ?></li> 
                             
-                            <li><?php echo anchor('bnw/setup', 'Setup') ?></li>
+                            <li><?php echo anchor('setting/setup', 'Setup') ?></li>
                         </ul>
                     </li>
                     
                    
-<!--                    <li class="mainMenuItem"><a href="#">Album</a>
+                    <li class="mainMenuItem"><a href="#">Album</a>
                         <ul class="subMenu">
-                            <li><?php //echo anchor('bnw/addalbum', 'Add New') ?></li>
+                            <li><?php echo anchor('album/addalbum', 'Add New') ?></li>
                             
                         </ul>
                     </li>
                     
                     <li class="mainMenuItem"><a href="#">Slider</a>
                         <ul class="subMenu">
-                            <li><?php //echo anchor('bnw/addslider', 'Add New') ?></li>
-                            <li><?php //echo anchor('bnw/slider', 'View All Slider') ?></li>
+                            <li><?php echo anchor('sliders/addslider', 'Add New') ?></li>
+                            <li><?php echo anchor('sliders/slider', 'View All Slider') ?></li>
                         </ul>
-                    </li>                    -->
+                    </li>                    
                    
                </ul>   
                 

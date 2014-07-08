@@ -1,7 +1,7 @@
 <?php
 function get_available_rooms($data)
     {
-    
+    die('sdfsdf');
            // echo '<span class="roomType">'.$data.'</span>';
             $ci=& get_instance();
             $ci->load-db('dashboard_model');

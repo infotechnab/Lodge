@@ -2,14 +2,14 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="<?php echo base_url(); ?>content/styles/spectrum.css" type="text/css" />
-    <link rel="stylesheet" media="screen" href="<?php echo base_url(); ?>content/styles/dashBoardStyles.css" type="text/css" /> 
-   <link rel="stylesheet" media="screen" href="<?php echo base_url(); ?>content/styles/stylesForGadgets.css" type="text/css" />
-    <script src="<?php echo base_url(); ?>content/jquery-1.9.1.min.js" > </script>
-    <script src="<?php echo base_url(); ?>content/scripts/jscolor.js" > </script>
-      <script src="<?php echo base_url(); ?>content/scripts/nicEdit.js"></script>
-       <script src="<?php echo base_url(); ?>content/scripts/gadgets.js"></script>
-       <script src="<?php echo base_url(); ?>content/scripts/spectrum.js"></script>
+    <link rel="stylesheet" href="<?php echo base_url(); ?>contents/uploads/styles/spectrum.css" type="text/css" />
+    <link rel="stylesheet" media="screen" href="<?php echo base_url(); ?>contents/uploads/styles/dashBoardStyles.css" type="text/css" /> 
+   <link rel="stylesheet" media="screen" href="<?php echo base_url(); ?>contents/uploads/styles/stylesForGadgets.css" type="text/css" />
+    <script src="<?php echo base_url(); ?>contents/uploads/scripts/jquery.min.js" > </script>
+    <script src="<?php echo base_url(); ?>contents/uploads/scripts/jscolor.js" > </script>
+      <script src="<?php echo base_url(); ?>contents/uploads/scripts/nicEdit.js"></script>
+       <script src="<?php echo base_url(); ?>contents/uploads/scripts/gadgets.js"></script>
+       <script src="<?php echo base_url(); ?>contents/uploads/scripts/spectrum.js"></script>
 <!--    <script type="text/javascript" src="http://js.nicedit.com/nicEdit-latest.js"></script> -->
 <script type="text/javascript">
 
@@ -65,9 +65,9 @@ $(document).ready(function() {
         <div id="top">
             
             <div id="topLeft">
-                <img src="<?php echo base_url()."content/bnw/images/menu.png"; ?>"/>
+                <img src="<?php echo base_url()."contents/bnw/images/menu.png"; ?>"/>
             </div>
-            <img src="<?php echo base_url()."content/bnw/images/bnw.png"; ?>"/>
+            <img src="<?php echo base_url()."contents/bnw/images/bnw.png"; ?>"/>
             <?php  if ($this->session->userdata('admin_logged_in')){ ?>
             <div id="topRight">
                 <p>

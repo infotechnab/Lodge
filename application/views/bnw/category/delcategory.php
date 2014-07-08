@@ -40,7 +40,7 @@ if(isset($category))
             <?php foreach ($related as $product){ ?>
             <tr>
                 <td><?php echo $product->name; ?></td>
-                <td><?php if(isset($product->image1)){?><img src="<?php echo base_url()."content/uploads/images/".$product->image1; ?>" width="60px" height="40px" /> <?php } else { echo "Image not found" ;} ?></td>
+                <td><?php if(isset($product->image1)){?><img src="<?php echo base_url()."contents/uploads/images/".$product->image1; ?>" width="60px" height="40px" /> <?php } else { echo "Image not found" ;} ?></td>
                 <td><?php echo $product->price; ?></td>
             </tr>
             <?php } ?>

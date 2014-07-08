@@ -11,7 +11,7 @@
 <p id="sucessmsg">
   <?php if($this->session->flashdata('message')){echo $this->session->flashdata('message');}?>
 </p>
-  <?php echo form_open_multipart('bnw/addcategory');?>
+  <?php echo form_open_multipart('dashboard/addcategory');?>
   
   <p>Name:<br />
   <input type="text" name="category_name" value="<?php echo set_value('category_name'); ?>" />
@@ -37,22 +37,22 @@
     <?php
             foreach ($query as $data){
             
-               $catData =  $this->dbmodel->get_file($data->id);
+              // $catData =  $this->dbmodel->get_file($data->id);
                                 
                 ?>
           <tr>
             <td><?php echo $data->id; ?></td>
             <td><?php echo $data->category_name ?></td>
-            <td><?php echo anchor('bnw/editcategory/'.$data->id,'Edit'); ?> / 
+            <td><?php echo anchor('dashboard/editcategory/'.$data->id,'Edit'); ?> / 
             <?php
             if(empty($catData))
             {
-                echo anchor('bnw/deletecategory/'.$data->id,'Delete');
+                echo anchor('dashboard/deletecategory/'.$data->id,'Delete');
                 
             }
             else 
                 {
-                echo anchor('bnw/delete_category/'.$data->id,'Delete');
+                echo anchor('dashboard/delete_category/'.$data->id,'Delete');
                 }            ?>
             
            

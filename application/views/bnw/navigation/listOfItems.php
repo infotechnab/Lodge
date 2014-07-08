@@ -97,7 +97,7 @@ $(document).ready(function() {
     
     <h3>List of all pages</h3>
         </div>
-    <?php echo form_open_multipart('bnw/addPageForNavigation', array('id' => 'search', 'name'=>'search'));?> 
+    <?php echo form_open_multipart('dashboard/addPageForNavigation', array('id' => 'search', 'name'=>'search'));?> 
     <div id="navigationLeftMiddle">
     <ul>
         
@@ -138,7 +138,7 @@ $(document).ready(function() {
     </p>
     <h3>List of all category</h3>
         </div>
-    <?php echo form_open_multipart('bnw/addCategoryForNavigation',array('id' => 'search', 'name'=>'search'));?>    
+    <?php echo form_open_multipart('dashboard/addCategoryForNavigation',array('id' => 'search', 'name'=>'search'));?>    
         <div id="navigationLeftMiddle">
     
     <ul>
@@ -183,7 +183,7 @@ $(document).ready(function() {
         </div>
         
           <div id="customLinkLeftMiddle">
-        <?php echo form_open_multipart('bnw/addCustomLink');?>
+        <?php echo form_open_multipart('dashboard/addCustomLink');?>
             
            <p>Navigation Title :
             <input type="text" name="navigation_name" placeholder="Type Navigation name" required/>
@@ -229,9 +229,9 @@ $(document).ready(function() {
     
     var dataString = 'menu_id_next=' + selectedValue;
     $a= dataString;
-    var link = '<?php echo base_url();?>'+'index.php/bnw/showNavigation/'+selectedValue;
+    var link = '<?php echo base_url();?>'+'index.php/dashboard/showNavigation/'+selectedValue;
     var editLink = '<a href='+link+'>'+'Edit Navigation'+'</a>';
-    var mLink = '<?php echo base_url();?>'+'index.php/bnw/manageNavigation/'+selectedValue;
+    var mLink = '<?php echo base_url();?>'+'index.php/dashboard/manageNavigation/'+selectedValue;
     var manageLink = '<a href='+mLink+'>'+'Manage Navigation'+'</a>';
    var blank = '';
   $.ajax({

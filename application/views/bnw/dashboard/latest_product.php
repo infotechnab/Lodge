@@ -31,7 +31,7 @@
             <td><?php echo $data->name ?></td>
            
             <td><?php echo $data->price ?></td>
-            <td><img src="<?php echo base_url()."content/uploads/images/".$data->image1; ?>" width="50" height="50" alt="Image not set!" /></td>
+            <td><img src="<?php echo base_url()."contents/uploads/images/".$data->image1; ?>" width="50" height="50" alt="Image not set!" /></td>
            
         </tr>
             <?php    

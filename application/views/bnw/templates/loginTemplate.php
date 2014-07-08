@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" media="screen" href="<?php echo base_url(); ?>content/styles/stylesForLogin.css" type="text/css" /> 
-    <script src="<?php echo base_url(); ?>content/jquery-1.9.1.min.js" > </script>
+    <link rel="stylesheet" media="screen" href="<?php echo base_url(); ?>contents/uploads/styles/stylesForLogin.css" type="text/css" /> 
+    <script src="<?php echo base_url(); ?>contents/uploads/jquery-1.9.1.min.js" > </script>
     <script type="text/javascript" src="http://js.nicedit.com/nicEdit-latest.js">
     </script> <script type="text/javascript">
 //<![CDATA[
@@ -35,7 +35,7 @@
                     <tbody>
                         <tr>
                         <td colspan="2">
-                            <img id="name" src="<?php echo base_url()."content/bnw/images/bnw.png"; ?>"/>
+                            <img id="name" src="<?php echo base_url()."contents/bnw/images/bnw.png"; ?>"/>
                                 <p id="sucessmsg">
                                     <?php if($this->session->flashdata('message')){echo $this->session->flashdata('message');}
                                 echo validation_errors(); ?> </p>
