@@ -14,6 +14,19 @@ body
     padding: 0px;
     width: 100%;
 }
+
+.full_view{
+    
+    
+}
+
+.event-list{
+    background-color: #0081c2; 
+}
+
+.page_title{
+    text-align: center;
+}
 .clear
 {
     clear:both;

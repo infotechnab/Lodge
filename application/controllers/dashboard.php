@@ -457,7 +457,7 @@ class Dashboard extends CI_Controller {
                     foreach ($myData as $k => $v) {
                         $navigation_type = "page";
                         $navigation_name = $v;
-                        $navigation_link = base_url()."index.php/view/".$navigation_type . "/" . $k;
+                        $navigation_link = base_url()."index.php/home/".$navigation_type . "/" . $k;
                         $navigation_slug = preg_replace('/\s+/', '', $v);
                     }
                     $this->dbdashboard->add_new_navigation_item($navigation_name, $navigation_link, $parent_id, $navigation_type, $navigation_slug, $menu_id);
@@ -555,7 +555,7 @@ class Dashboard extends CI_Controller {
                     foreach ($myData as $k => $v) {
                         $navigation_name = $v;
                         $navigation_type = "category";
-                        $navigation_link = base_url()."index.php/view/".$navigation_type . "/" . $k;
+                        $navigation_link = base_url()."index.php/home/".$navigation_type . "/" . $k;
                         $navigation_slug = preg_replace('/\s+/', '', $v);
                         ;
                     }

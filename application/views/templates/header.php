@@ -59,6 +59,7 @@
         
         
         <div id="full">
+           
             <!--slider is called here-->
             <div id="slider">
                     <!-- Start WOWSlider.com BODY section -->
@@ -137,7 +138,7 @@
           
        
          <div class="clear"></div>
-         
+          <div class="full_view">
           <!-- Check in check out div is closed here-->   
             
          

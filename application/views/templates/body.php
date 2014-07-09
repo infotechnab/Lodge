@@ -87,6 +87,41 @@
               
                  
               <div id="rightContainer">
+                  
+                  <div>
+                       <?php foreach ($event as $sideEvent){
+        $date=date("Y-m-d", strtotime($sideEvent->date));
+        $time=date("h:i A", strtotime($sideEvent->date));
+        $setTime=date("G:i:s", strtotime($sideEvent->date));
+         $noTime="0:00:00";      
+        		                ?>
+            <div class="event-list">
+                <a style="color:#000;" href="<?php echo base_url()."index.php/home/eventDetails/".$sideEvent->id ?>"><div class='sidebarContentNext' style="z-index: 1;">
+                
+                <?php if (strlen($sideEvent->image)>2){ ?>
+		                    <div class="cartImage" style="float: left; width: 14%; min-height: 40px; margin: -1px; padding: 0px;">
+		                       <img src="<?php echo base_url().'contents/uploads/images/'.$sideEvent->image; ?>" width="51" height="51"  /> 
+		                    </div>
+                <?php } ?>
+		                    <div class="eventTitle">
+		                       
+                                        <h4><?php echo mb_strimwidth($sideEvent->title, 0, 37, "..."); ?></h4>
+                                        <p>On <?php echo $date;  ?> <?php if($setTime!==$noTime){ echo'at'. $time;} else{}  ?></p>
+                                       
+                                       
+                                        
+		                    </div> 
+                                    
+		                     
+                                          
+		                </div></a>
+       </div>
+                            <?php } ?>
+                  </div> 
+                  
+                  
+                  
+                  
                   <iframe src="//www.facebook.com/plugins/likebox.php?href=https%3A%2F%2Fwww.facebook.com%2Fchitwangaidalodge&amp;width&amp;height=290&amp;colorscheme=light&amp;show_faces=true&amp;header=true&amp;stream=false&amp;show_border=true" scrolling="no" frameborder="0" style="border:none; overflow:hidden; height:290px;" allowTransparency="true"></iframe>         
                   
 <!--            <img src="<?php echo base_url(); ?>contents/images/tripAdvisor.png" /> -->

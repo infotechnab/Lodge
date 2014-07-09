@@ -21,6 +21,7 @@ function fetch_menu($query) {
         $menu_id = $result ['id'];
         $menu_name = $result ['navigation_name'];
         $menu_link = $result ['navigation_link'];
+        $url = base_url().'index.php/home/';
                 
                 ?>
 <li class="has-sub"><a href="<?php echo $menu_link; ?>" style="color: #ffffff;"><?php echo $menu_name; ?></a>

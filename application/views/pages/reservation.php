@@ -5,4 +5,4 @@
  * and open the template in the editor.
  */
 ?>
-<h1>Reservation page</h1>
+<h1 class="page_title">Reservation page</h1>

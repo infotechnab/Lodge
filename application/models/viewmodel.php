@@ -17,7 +17,18 @@ class Viewmodel extends CI_Model
         $query = $this->db->get();
         return $query->result();  
     }
+       public function get_max_events(){
+        $this->db->limit(3);
+        $this->db->order_by('date','DESC');
+         $query = $this->db->get('events');
+        return $query->result();
+    }
     
+      public function get_events_by_id($id){
+        $this->db->where('id',$id);
+         $query = $this->db->get('events');
+        return $query->result();
+    }
     public function get_max_post_to_show(){
         $this->db->select('description');
          $this->db->from('misc_setting');
@@ -222,6 +233,12 @@ class Viewmodel extends CI_Model
     {  
         $this->db->from('album');
         $query = $this->db->get();
+        return $query->result();  
+    }
+    public function get_album_data($id)
+    {  
+        $this->db->where('id',$id);
+        $query = $this->db->get('album');
         return $query->result();  
     }
     

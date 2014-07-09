@@ -5,4 +5,4 @@
  * and open the template in the editor.
  */
 ?>
-<h1>Services</h1>
+<h1 class="page_title">Services</h1>
