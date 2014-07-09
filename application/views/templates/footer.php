@@ -2,7 +2,7 @@
     $this->load->helper('footer_helper'); 
      $type = get_gadget_footer();
 ?> 
-<div id ="footer" style="background-color: #000;">
+<div id ="footer" >
     
     
     <div style="alignment-adjust: central">

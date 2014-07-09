@@ -84,8 +84,9 @@ if(isset($selectedalbumquery))
         $title = $album->album_name;
     }
     ?>
-
+ <div class="title-background">
     <h1 class="page_title"><?php echo $title.'>> '; ?>Photos</h1>
+ </div>
     <?php
 foreach ($selectedalbumquery as $data) {
     

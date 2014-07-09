@@ -1,6 +1,6 @@
-
+ <div class="title-background">
 <h1 class="page_title" >Gallery </h1>
-
+</div>
 <?php
 if($albumquery){
 foreach ($albumquery as $data)

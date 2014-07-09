@@ -117,7 +117,7 @@
             
         
           
-            <div id="home"><img src="<?php echo base_url(); ?>contents/uploads/images/desktop.png" /> </div>
+            <div id="home"> <img src="<?php echo base_url(); ?>contents/uploads/images/desktop.png" /> </div>
             <div id="navigation">
                 <ul>
                   <?php   $this->load->helper('menumaker_helper');

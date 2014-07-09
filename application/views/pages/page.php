@@ -80,9 +80,9 @@
 if($selectedpagequery){
 foreach ($selectedpagequery as $page) {
                     ?>
-                    <div class="container">
-                        <div class="containerHeader">
-                            <h3> <?php echo $page->page_name ; ?> </h3>
+<!--                    <div class="container">-->
+                        <div class="title-background">
+                            <h1> <?php echo $page->page_name ; ?> </h1>
                             
                         </div>
                         <div class="content">
@@ -194,7 +194,7 @@ foreach ($selectedpagequery as $page) {
      
       <!--share button closed -->
      
-                    </div> 
+<!--                    </div> -->
 
                 <?php }}
                 else {

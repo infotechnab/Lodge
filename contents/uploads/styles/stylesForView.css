@@ -148,15 +148,7 @@ p
     float: left;
     min-height: 300px;
 }
-#footer
-{
-    width: auto!important;
-    min-height: 20px;
-     background-color: #fff;
-     font-size: 10px;
-     padding: 5px 10px 0px 10px;
-     border-top: 2px dotted #D0D0D0;
-}
+
 #copyright
 {
    
@@ -920,7 +912,7 @@ p
 
 #description a:hover
 {
-    color:#000;
+    color: #3399ff;
 }
 
 #title
@@ -935,4 +927,11 @@ p
 iframe
 {
     height: 200px;
+}
+.title-background{
+    margin: 0 auto 0 auto;
+    margin-top: -21px;
+    padding: 0px;
+    background-color: #24748c;
+    text-align: center;
 }
