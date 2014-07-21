@@ -40,7 +40,7 @@ class room_booking extends CI_Controller {
             'adult' => $_POST['adult'],
             'child' => $_POST['child']
                     );
-            die('hello');
+            
             $hotelId= $_POST['hotelId'];
             
             $data['query']= $this->dashboard_model->booking_room($hotelId);
@@ -92,7 +92,7 @@ class room_booking extends CI_Controller {
            // die($fullName);
           //die($check_in);
    
-            $data['personalInfo']=$this->booking_room->personal_info($fullName,$address,$occupation,$nationality,$contactNo,$email,$remarks,$totalPrice,$child_s,$adult_s);
+            $data['personalInfo']=$this->dashboard_model->personal_info($fullName,$address,$occupation,$nationality,$contactNo,$email,$remarks,$totalPrice,$child_s,$adult_s);
          
             $jsondatas = $_POST['updated_json'];
             
