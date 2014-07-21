@@ -89,7 +89,9 @@ class Home extends CI_Controller {
              
         }
       $data["query"] = $this->dboffers->get_all_posts_for_pages();
-        $this->load->view('templates/header',$data);
+        $data['slider_json'] = json_encode($data['slidequery']);
+       
+        $this->load->view('templates/newSliderTest',$data);
        $this->load->view('pages/reservation',$data);        
         $this->load->view('templates/footer',$data); 
     }
@@ -126,7 +128,9 @@ class Home extends CI_Controller {
              
         }
       $data["query"] = $this->dboffers->get_all_posts_for_pages();
-        $this->load->view('templates/header',$data);
+       $data['slider_json'] = json_encode($data['slidequery']);
+       
+        $this->load->view('templates/newSliderTest',$data);
        $this->load->view('pages/wildlife',$data);        
         $this->load->view('templates/footer',$data); 
     }
@@ -163,7 +167,9 @@ class Home extends CI_Controller {
              
         }
       $data["query"] = $this->dboffers->get_all_posts_for_pages();
-        $this->load->view('templates/header',$data);
+       $data['slider_json'] = json_encode($data['slidequery']);
+       
+        $this->load->view('templates/newSliderTest',$data);
        $this->load->view('pages/services',$data);        
         $this->load->view('templates/footer',$data); 
     }
@@ -196,7 +202,9 @@ class Home extends CI_Controller {
         }
        $data['noOfRecentPost'] = $this->viewmodel->recentpost_get_post($post);
         
-        $this->load->view('templates/header',$data);
+        $data['slider_json'] = json_encode($data['slidequery']);
+       
+        $this->load->view('templates/newSliderTest',$data);
         $this->load->view('pages/location');        
         $this->load->view('templates/footer',$data);
         
@@ -235,7 +243,9 @@ class Home extends CI_Controller {
         }
          $data['noOfRecentPost'] = $this->viewmodel->recentpost_get_post($post);
         
-         $this->load->view('templates/header',$data);
+       $data['slider_json'] = json_encode($data['slidequery']);
+       
+        $this->load->view('templates/newSliderTest',$data);
        $this->load->view('pages/page',$data);        
         $this->load->view('templates/footer',$data);
         
@@ -267,7 +277,9 @@ class Home extends CI_Controller {
         }
        $data['noOfRecentPost'] = $this->viewmodel->recentpost_get_post($post);
         
-        $this->load->view('templates/header',$data);
+       $data['slider_json'] = json_encode($data['slidequery']);
+       
+        $this->load->view('templates/newSliderTest',$data);
        $this->load->view('pages/gallery',$data);        
         $this->load->view('templates/footer',$data);
         
@@ -303,7 +315,9 @@ class Home extends CI_Controller {
         $data['selectedalbumquery'] =  $this->viewmodel->get_selected_album($id);
         
         
-        $this->load->view('templates/header',$data);
+       $data['slider_json'] = json_encode($data['slidequery']);
+       
+        $this->load->view('templates/newSliderTest',$data);
        $this->load->view('pages/photos',$data);        
         $this->load->view('templates/footer',$data); 
         
@@ -341,7 +355,9 @@ class Home extends CI_Controller {
         $data['selectedalbumquery'] =  $this->viewmodel->get_selected_album($id);
         
         
-        $this->load->view('templates/header',$data);
+        $data['slider_json'] = json_encode($data['slidequery']);
+       
+        $this->load->view('templates/newSliderTest',$data);
        $this->load->view('pages/event', $data);       
         $this->load->view('templates/footer',$data); 
         
@@ -377,7 +393,9 @@ class Home extends CI_Controller {
         }
        $data['noOfRecentPost'] = $this->viewmodel->recentpost_get_post($post);        
         
-        $this->load->view('templates/header',$data);
+       $data['slider_json'] = json_encode($data['slidequery']);
+       
+        $this->load->view('templates/newSliderTest',$data);
        $this->load->view('pages/all_events', $data);       
         $this->load->view('templates/footer',$data); 
         

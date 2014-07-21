@@ -109,22 +109,31 @@
 
             .nav {
                 display:block;
-                text-indent:-10000px;
+                //text-indent:-10000px;
                 position:relative;
                 cursor:pointer;
             }
 
             #leftNav {
-                top:223px;
-                left:10px;
-                position: relative;
-                z-index:999;
+              background-color: #ddd;
+    border-radius: 10px;
+    left: 1%;
+    margin: 0;
+    position: relative;
+    top: -150px;
+    width: 23px;
+    z-index: 999;
             }
 
             #rightNav {
-                //left:400px;      
-                position: relative;      
-                z-index:999;
+                background-color: #ddd;
+    border-radius: 10px;
+    right: -97%;
+    margin: 0;
+    position: relative;
+    top: -173px;
+    width: 23px;
+    z-index: 999;
             }
             .sliderTable
             {
@@ -139,7 +148,7 @@
                 position:relative;
                 margin: 0px;
                 padding: 10px;
-                width: 400px;
+                width: 25%;
                 opacity: 0.5;
                 border-radius: 5px;
             }
@@ -174,8 +183,8 @@
                 $('#slidesHolder').css('width', slideWidth * numberOfSlides);
 
                 $('#slideshow')
-                .append('<span class="nav" id="leftNav">Move Left</span>')
-                .append('<span class="nav" id="rightNav">Move Right</span>');
+                .append('<div class="nav" id="leftNav"><h3><<</h3></div>')
+                .append('<div class="nav" id="rightNav"><h3>>></h3></div>');
 
                 manageNav(currentPosition);
 
@@ -301,27 +310,12 @@
             <div id="slider">
                 <div id="slideshow">
                     <div id="slideshowWindow">
-                        <!-- from here the details starts and it must be replaced by slider-->
-
-                        <!-- here the details ends-->
+                        
 
 
                     </div></div>
-                <!-- Start WOWSlider.com BODY section 
-                <div id="wowSlider">
-                    <div class="ws_images"><ul>
-                                  
-                <?php // foreach ($slidequery as $data) {
-                ?>  
-                            
-                            <li><div class='ws-title' ><?PHP //echo $data->slide_name."<br/>".$data->slide_content;   ?></div> <img src="<?php //echo base_url();   ?>contents/uploads/images/<?php //echo $data->slide_image;   ?>" /> </li> <?php // }   ?>
-                           
-                          
-                        </ul>
-                    </div>
-                    
-                </div>
-                -->
+                
+               
 
 
                 <div id="header">

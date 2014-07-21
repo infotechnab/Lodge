@@ -62,24 +62,18 @@
                       <!-- Chitwan gaida lodge home closed-->
                       
                       <div id="rightBottomLeftContainer">
-<!--                         <img src="<?php echo base_url(); ?>contents/images/testimonials.png" /> -->
+<!--                         <img src="<?php echo base_url(); ?>contents/images/testimonials.png" /> --> 
  
- <div id="TA_certificateOfExcellence501" class="TA_certificateOfExcellence" style="margin:-10px 0px 0px 306px; z-index: 100; position: absolute;">
-
-</div>
-<script src="http://www.jscache.com/wejs?wtype=certificateOfExcellence&amp;uniq=501&amp;locationId=2083553&amp;lang=en_US&amp;year=2014"></script>
-
-
-<div id="TA_selfserveprop611" class="TA_selfserveprop" style="z-index: 0; width: 100%; margin: 0px; padding: 0px;">
-<ul id="tJZLiz7A" class="TA_links C1HTRFZ10Y">
-<li id="g7lqw4S240" class="vv4IsH4bls">
+ <div id="TA_selfserveprop86" class="TA_selfserveprop">
+<ul id="8dDniCu3NlR" class="TA_links 4p71jMEhH5T">
+<li id="D5YdVRcL2P" class="21BjNw556">
 <a target="_blank" href="http://www.tripadvisor.com/"><img src="http://www.tripadvisor.com/img/cdsi/img2/branding/150_logo-11900-2.png" alt="TripAdvisor"/></a>
 </li>
 </ul>
 </div>
-<script src="http://www.jscache.com/wejs?wtype=selfserveprop&amp;uniq=611&amp;locationId=2083553&amp;lang=en_US&amp;rating=true&amp;nreviews=5&amp;writereviewlink=true&amp;popIdx=true&amp;iswide=true&amp;border=true"></script>
+<script src="http://www.jscache.com/wejs?wtype=selfserveprop&amp;uniq=86&amp;locationId=2083553&amp;lang=en_US&amp;rating=true&amp;nreviews=4&amp;writereviewlink=true&amp;popIdx=true&amp;iswide=true&amp;border=true"></script>
 
-                      </div>
+                     </div>
                       
                       <!-- testimonials is closed here-->
                       
