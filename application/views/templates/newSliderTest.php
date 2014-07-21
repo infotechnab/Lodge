@@ -57,7 +57,7 @@
                 margin:0;
                 padding:0;
                 float:left;
-                width: 750px;
+                width: 1350px;
                 height: 600px;
                 position: relative;
             }
@@ -132,12 +132,16 @@
             }
             .slideContents
             {
-                //      top:-567px;
-                // left:6.5%;
-                 position:relative;
-                //margin: 0px;
-               // padding: 0px;
-               // width: 600px;
+                top:-167px;
+                background-color: #000;
+                color: #fff;
+                left:6.5%;
+                position:relative;
+                margin: 0px;
+                padding: 10px;
+                width: 400px;
+                opacity: 0.5;
+                border-radius: 5px;
             }
 
 
@@ -147,33 +151,13 @@
 
         <script type="text/javascript">
    
-            function slider()
-            {
-                var i = 0;
-                var base_url = '<?php echo base_url(); ?>';
-                var sliderJson = <?php echo $slider_json ?>;
-      
-                var tbl = "";
-                for (i = 0; i < sliderJson.length; i++)
-                {
-                    var ftbl = '<div class="slide"><table class="sliderTable">';
-                    tbl = '<tr><td><img src=' +
-                        base_url + 'contents/uploads/images/' +
-                        sliderJson[i].slide_image + ' id="sliderImage" ></td><td><div class="slideContents"><h2>' +
-                        sliderJson[i].slide_name +
-                        '</h2><p>' +
-                        sliderJson[i].slide_content + '</p> <div class="sliderContent"><div class="contentContainerFooterLeft"><h4>' +
-                        '</h4></div></div></div></td></tr>';
-                    var ltbl = '</table></div>';
-                    $("#slideshowWindow").append(ftbl + tbl + ltbl);
-                }
-            }
+            
     
             $(document).ready(function() {
 
                 slider();
                 var currentPosition = 0;
-                var slideWidth = 750;
+                var slideWidth = 1350;
                 var slides = $('.slide');
                 var numberOfSlides = slides.length;
                 var slideShowInterval;
@@ -246,6 +230,29 @@
                     $('#slidesHolder')
                     .animate({'marginLeft': slideWidth * (-currentPosition)});
                 }
+                
+                function slider()
+            {
+                var i = 0;
+                var base_url = '<?php echo base_url(); ?>';
+                var sliderJson = <?php echo $slider_json ?>;
+      
+                var tbl = "";
+                for (i = 0; i < sliderJson.length; i++)
+                {
+                    var ftbl = '<div class="slide"><table class="sliderTable">';
+                    tbl = '<tr><td><img src=' +
+                        base_url + 'contents/uploads/images/' +
+                        sliderJson[i].slide_image + ' id="sliderImage" ></td></tr><tr><td><div class="slideContents"><h2>' +
+                        sliderJson[i].slide_name +
+                        '</h2><p>' +
+                        sliderJson[i].slide_content + '</p> <div class="sliderContent"><div class="contentContainerFooterLeft"><h4>' +
+                        '</h4></div></div></div></td>';
+                    var ltbl = '</table></div>';
+                    $("#slideshowWindow").append(ftbl + tbl + ltbl);
+                }
+            }
+                
 
             });
         </script>       
@@ -307,7 +314,7 @@
                 <?php // foreach ($slidequery as $data) {
                 ?>  
                             
-                            <li><div class='ws-title' ><?PHP //echo $data->slide_name."<br/>".$data->slide_content;  ?></div> <img src="<?php //echo base_url();  ?>contents/uploads/images/<?php //echo $data->slide_image;  ?>" /> </li> <?php // }  ?>
+                            <li><div class='ws-title' ><?PHP //echo $data->slide_name."<br/>".$data->slide_content;   ?></div> <img src="<?php //echo base_url();   ?>contents/uploads/images/<?php //echo $data->slide_image;   ?>" /> </li> <?php // }   ?>
                            
                           
                         </ul>
@@ -350,7 +357,8 @@
                 <div id="home"> <img src="<?php echo base_url(); ?>contents/uploads/images/desktop.png" /> </div>
                 <div id="navigation">
                     <ul>
-                        <?php $this->load->helper('menumaker_helper');
+                        <?php
+                        $this->load->helper('menumaker_helper');
 
                         fetch_menu(query(0));
                         ?>
