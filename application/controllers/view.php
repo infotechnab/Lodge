@@ -41,7 +41,7 @@ public function index()
              $data['noOfRecentPost'] = $this->viewmodel->recentpost_get_post($post);  
              
         }
-            
+           
          
        
          

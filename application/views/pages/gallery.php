@@ -1,6 +1,9 @@
  <div class="title-background">
 <h1 class="page_title" >Gallery </h1>
 </div>
+
+ 
+<div class="content">  
 <?php
 if($albumquery){
 foreach ($albumquery as $data)
@@ -10,17 +13,23 @@ foreach ($albumquery as $data)
                   
 	$result = $this->viewmodel->get_media_image($aid); 
         if($result)
-        {
-foreach( $result as $abc)
-{
-   ?> 
-    
-
+        { ?>
 <div id="photodiv">
-   
+   <ul id="gallery">
+       <?php foreach( $result as $abc)
+{
+   ?>
+<li>
+<img src="<?php echo base_url().'contents/uploads/images/'.$abc->media_type; ?>" alt="" /></li>
+<?php } ?>	<!--<li><img src="<?php //echo base_url().'contents/uploads/images/'.$abc->media_type; ?>" id="galleryimage" /></li>-->
+</ul>
+  <img src="<?php echo base_url().'contents/uploads/images/'.$abc->media_type; ?>" id="galleryimage" alt="" /> 
     
+   <!-- from here-->
 
-    <img src="<?php echo base_url(); ?>contents/uploads/images/<?php echo $abc->media_type; ?>" id="galleryimage" />
+
+   <!-- till here-->
+    
         <div id="imagetitle">
             <?php echo anchor('home/photo/'.$data->id,$data->album_name); ?> 
         </div>
@@ -31,7 +40,7 @@ foreach( $result as $abc)
 </div> 
 
 
-<?php }}
+<?php }
 else 
  {  
     

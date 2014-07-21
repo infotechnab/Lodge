@@ -47,11 +47,9 @@ class Home extends CI_Controller {
              
         }
       $data["query"] = $this->dboffers->get_all_posts_for_pages();
-//       $data['headerlogo']= $this->viewmodel->get_header_logo();
-//       $data['headertitle']= $this->viewmodel->get_header_title();
-//       $data['meta'] = $this->dbsetting->get_meta_data();
-//       $data['slidequery'] = $this->viewmodel->get_slider();
-        $this->load->view('templates/header',$data);
+        $data['slider_json'] = json_encode($data['slidequery']);
+       
+        $this->load->view('templates/newSliderTest',$data);
         $this->load->view('templates/reservation_template');
         $this->load->view('templates/body',$data);        
         $this->load->view('templates/footer',$data);
@@ -199,7 +197,7 @@ class Home extends CI_Controller {
        $data['noOfRecentPost'] = $this->viewmodel->recentpost_get_post($post);
         
         $this->load->view('templates/header',$data);
-       $this->load->view('pages/location',$data);        
+        $this->load->view('pages/location');        
         $this->load->view('templates/footer',$data);
         
      
@@ -236,13 +234,6 @@ class Home extends CI_Controller {
             
         }
          $data['noOfRecentPost'] = $this->viewmodel->recentpost_get_post($post);
-        
-//        $this->load->view('menuview/header',$data);
-//        $this->load->view('menuview/menu',$data);
-//        $this->load->view('menuview/event',$data);
-//        $this->load->view('menuview/slider',$data);
-//       // $this->load->view('menuview/selectedPage',$data);
-//        $this->load->view('menuview/footer',$data);  
         
          $this->load->view('templates/header',$data);
        $this->load->view('pages/page',$data);        
@@ -358,7 +349,48 @@ class Home extends CI_Controller {
         
         
     }
+
+     public function events() {
         
+        $data['events'] = $this->viewmodel->get_all_events();
+        $data['event'] = $this->viewmodel->get_max_events();
+       $data['meta'] = $this->dbsetting->get_meta_data();
+        $limit['post_limit']=$this->viewmodel->get_max_post_to_show();
+        $data['postquery'] = $this->viewmodel->get_post($limit["post_limit"]);
+        $limit['page_limit']=$this->viewmodel->get_max_page_to_show();
+        $data['pagequery'] = $this->viewmodel->get_page($limit["page_limit"]);
+        $data['slidequery'] = $this->viewmodel->get_slider();
+        $data['headerquery']= $this->viewmodel->get_design_setup();
+        $data['headertitle']= $this->viewmodel->get_header_title();
+        $data['headerColor']= $this->viewmodel->get_header_color();
+         $data['sidebarColor']= $this->viewmodel->get_sidebar_color();
+        $data['headerlogo']= $this->viewmodel->get_header_logo();
+        $data['faviconicon']= $this->viewmodel->get_favicon_icon();
+        $data['headerdescription']= $this->viewmodel->get_header_description();
+        $data['gadget'] = $this->model1->get_gaget();                    //for all gadget
+        $data['recentPost']= $this->model1->get_gaget_recentPost();   //for recent post gadget.
+         foreach ($data['recentPost'] as $dat)
+        {
+             $setting = $dat->setting;
+             parse_str($setting);
+           
+        }
+       $data['noOfRecentPost'] = $this->viewmodel->recentpost_get_post($post);        
+        
+        $this->load->view('templates/header',$data);
+       $this->load->view('pages/all_events', $data);       
+        $this->load->view('templates/footer',$data); 
+        
+
+        
+        
+    }
+    
+   
+    
+    
+    
+    
 }
 
 /* End of file welcome.php */

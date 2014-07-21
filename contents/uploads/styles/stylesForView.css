@@ -26,30 +26,8 @@ body
 
 
 /* for album*/
-#photodiv
-{
-    float: left;
-    width: 150px;
-  
-    border: #999999 solid 1px;
-    padding: 10px;
-    margin: 10px;
-}
-#close
-{
-    width: 20px;
-}
-#galleryimage
-{
-    width: 150px;
-    height: 150px;
-    
-}
-#imagetitle
 
-{
-    min-width: 80px;
-}
+
 /*album completed */
 
 .list
@@ -106,16 +84,7 @@ a:hover
     padding: 0px;
 }
 
-.eventHeader, .downloadHeader, .containerHeader
-{
-    width: 100%!important;
-    margin: 0;
-    background-color: #000;
-    color: #fff;
-    min-height: 10px;
-    float: none!important;
-    text-align: center;
-}
+
 .newNews
 {  
     color: #005702;
@@ -144,9 +113,11 @@ p
 }
 .content
 {
-    width: auto;
+    width: 90%;
     float: left;
     min-height: 300px;
+    padding: 2% 5% 2% 5%;
+    background-color: darkgreen;
 }
 
 #copyright
@@ -245,11 +216,7 @@ p
     text-decoration: none;
 }
 
-    .eventHeader, .downloadHeader, .containerHeader
-    {
-        width: auto!important;
-        padding: 0px 5px 0px 5px;
-    }
+    
     .paragraph
     {
         padding: 0px 10px 0px 10px;
@@ -929,9 +896,8 @@ iframe
     height: 200px;
 }
 .title-background{
-    margin: 0 auto 0 auto;
-    margin-top: -21px;
-    padding: 0px;
+    margin: 0px;
+    padding: 2px;
     background-color: #1a6ef8;
     text-align: center;
     color:  #ffffff;

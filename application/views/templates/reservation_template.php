@@ -1,6 +1,6 @@
  <div id="checkInOut">
+     <h3 style="margin:0px; color: #fff; padding: 5px 0px 0px 0px;">Make Reservation</h3>
 <script src="<?php echo base_url().'contents/uploads/scripts/datepicker.js' ?>"></script>
-<link rel="stylesheet" type="text/css" href="<?php echo base_url().'contents/uploads/styles/tableStyles.css';?> " />
 <link rel="stylesheet" type="text/css" href="<?php echo base_url().'contents/uploads/styles/tableStyles.css';?> " />
 <script src="<?php echo base_url() . "contents/uploads/scripts/apiCheckin.js"; ?>"></script>
 
@@ -122,7 +122,7 @@ function movecursornext() {
                              </div>
                     </td>
                     <td style="margin-top:-15px;">
-                        <input type ="button" value="Submit" style="margin-top:-25px;" id="checkinbtn">
+                        <input type ="button" value="Book Now" id="checkinbtn">
                       
                     </td>
             </table>

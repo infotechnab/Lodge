@@ -110,7 +110,7 @@ iframe{
     cursor: pointer;
     border: none;
     background-size: 100%;
-   background-image:  url(http://localhost/lodge/contents/bnw/images/delete.png);
+   background-image:  url(../../bnw/images/delete.png);
     height: 20px;
 }
 
@@ -118,7 +118,7 @@ iframe{
 {
     color: #666666;
     padding-right:10px;
-   // border-right: thin solid;
+   
     float: left;
     width: auto;
     padding-left: 15px;

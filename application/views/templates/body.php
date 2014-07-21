@@ -5,33 +5,46 @@
                       <?php if(!empty($query))
                       {
      foreach ($query as $data)
-     { ?>
+     {
+         if(strlen($data->image)>0){
+         ?>
          <div id="rates">
-             <img src="<?php echo base_url().'contents/uploads/images/'.$data->image; ?>" width="50" height="50" />
-                          <h1><?php echo $data->post_title; ?></h1>
-                          <p><?php echo $data->post_summary; ?> </p>
+             <img style="float: left;" src="<?php echo base_url().'contents/uploads/images/'.$data->image; ?>" width="50" height="50" />
+                       <?php
+    if (strlen($data->post_title) <= 12) {
+        ?>   <h1><?php echo $data->post_title; ?></h1><?php }else { ?>
+       <h1><?php  echo mb_strimwidth($data->post_title, 0, 12, ".."); ?></h1>
+                        <?php }
+                        ?>
+                          <?php
+    if (strlen($data->post_content) <= 100) {
+        ?>   <p><?php echo $data->post_content; ?></p><?php }else { ?>
+       <p><?php  echo mb_strimwidth($data->post_content, 0, 100, "..."); ?></p>
+                        <?php }
+                        ?>
                       </div>
     <?php }
+    else{ ?>
+        <div id="rates">
+                       <?php
+    if (strlen($data->post_title) <= 12) {
+        ?>   <h1><?php echo $data->post_title; ?></h1><?php }else { ?>
+       <h1><?php  echo mb_strimwidth($data->post_title, 0, 12, ".."); ?></h1>
+                        <?php }
+                        ?>
+                          <?php
+    if (strlen($data->post_content) <= 100) {
+        ?>   <p><?php echo $data->post_content; ?></p><?php }else { ?>
+       <p><?php  echo mb_strimwidth($data->post_content, 0, 100, "..."); ?></p>
+                        <?php }
+                        ?>
+                      </div>
+  <?php  }
+    }
                       }
 ?>
                       
-<!--                      <div id="rates">
-                          <h1>Best Rates</h1>
-                          <p>Chitwan Gaida Lodge provide best rates & facilities in Chitwan, Kathmandu, Nepal. </p>
-                      </div>
-                      
-                      <div id="friendlines">
-                          <h1>Friendliness</h1>
-                          <p>We provide friendly behavior to our valued customers.</p>
-                      </div>
-                      
-                      <div id="location">
-                          <h1>Location</h1>
-                          <p>We have central location presence in Sauraha. Sight Seen, elephant riding, bird watching are just right way from our location.</p>
-                      </div>-->
-                      
-                      
-                      
+
                   </div>
                   
                   <!-- best rates, friendliness, location is closed here-->
@@ -50,24 +63,21 @@
                       
                       <div id="rightBottomLeftContainer">
 <!--                         <img src="<?php echo base_url(); ?>contents/images/testimonials.png" /> -->
-                          <div id="TA_certificateOfExcellence501" class="TA_certificateOfExcellence">
-<ul id="uOk1NU" class="TA_links 1noHtv">
-<li id="6binj6V" class="1nQN9WUdro">
-<a target="_blank" href="http://www.tripadvisor.com/"><img src="http://www.tripadvisor.com/img/cdsi/img2/awards/CoE2014_WidgetAsset-14348-2.png" alt="TripAdvisor" class="widCOEImg" id="CDSWIDCOELOGO"/></a>
-</li>
-</ul>
+ 
+ <div id="TA_certificateOfExcellence501" class="TA_certificateOfExcellence" style="margin:-10px 0px 0px 306px; z-index: 100; position: absolute;">
+
 </div>
 <script src="http://www.jscache.com/wejs?wtype=certificateOfExcellence&amp;uniq=501&amp;locationId=2083553&amp;lang=en_US&amp;year=2014"></script>
 
-<h4>Testimonials</h4>
-<div id="TA_selfserveprop611" class="TA_selfserveprop">
+
+<div id="TA_selfserveprop611" class="TA_selfserveprop" style="z-index: 0; width: 100%; margin: 0px; padding: 0px;">
 <ul id="tJZLiz7A" class="TA_links C1HTRFZ10Y">
 <li id="g7lqw4S240" class="vv4IsH4bls">
 <a target="_blank" href="http://www.tripadvisor.com/"><img src="http://www.tripadvisor.com/img/cdsi/img2/branding/150_logo-11900-2.png" alt="TripAdvisor"/></a>
 </li>
 </ul>
 </div>
-<script src="http://www.jscache.com/wejs?wtype=selfserveprop&amp;uniq=611&amp;locationId=2083553&amp;lang=en_US&amp;rating=true&amp;nreviews=5&amp;writereviewlink=true&amp;popIdx=true&amp;iswide=false&amp;border=true"></script>
+<script src="http://www.jscache.com/wejs?wtype=selfserveprop&amp;uniq=611&amp;locationId=2083553&amp;lang=en_US&amp;rating=true&amp;nreviews=5&amp;writereviewlink=true&amp;popIdx=true&amp;iswide=true&amp;border=true"></script>
 
                       </div>
                       
@@ -87,44 +97,51 @@
               
                  
               <div id="rightContainer">
-                  
-                  <div>
+               <?php if(!empty($event)){ ?>   
+                  <a style="color: #000;" href="<?php echo base_url()."index.php/home/events"?>"><div class="event"><h3>Events</h3></div></a> 
                        <?php foreach ($event as $sideEvent){
         $date=date("Y-m-d", strtotime($sideEvent->date));
         $time=date("h:i A", strtotime($sideEvent->date));
         $setTime=date("G:i:s", strtotime($sideEvent->date));
          $noTime="0:00:00";      
         		                ?>
-            <div class="event-list">
-                <a style="color:#000;" href="<?php echo base_url()."index.php/home/eventDetails/".$sideEvent->id ?>"><div class='sidebarContentNext' style="z-index: 1;">
+                  <a style="color:#000; text-decoration: none;" href="<?php echo base_url()."index.php/home/eventDetails/".$sideEvent->id ?>">
+                  <div class="event-list">
                 
-                <?php if (strlen($sideEvent->image)>2){ ?>
-		                    <div class="cartImage" style="float: left; width: 14%; min-height: 40px; margin: -1px; padding: 0px;">
-		                       <img src="<?php echo base_url().'contents/uploads/images/'.$sideEvent->image; ?>" width="51" height="51"  /> 
-		                    </div>
-                <?php } ?>
-		                    <div class="eventTitle">
+                
+                <?php if (strlen($sideEvent->image)>0){ ?>
+	<div class="eventTitle">	                   
+		                       <img style="float:left;" src="<?php echo base_url().'contents/uploads/images/'.$sideEvent->image; ?>" width="51" height="51"  />
 		                       
-                                        <h4><?php echo mb_strimwidth($sideEvent->title, 0, 37, "..."); ?></h4>
-                                        <p>On <?php echo $date;  ?> <?php if($setTime!==$noTime){ echo'at'. $time;} else{}  ?></p>
+                                        <h4 style="margin:0px; padding:0px; " ><?php echo mb_strimwidth($sideEvent->title, 0, 37, "..."); ?></h4>
+                                        <p style="margin:0px; padding:0px; color: #555;">On <?php echo $date;  ?> <?php if($setTime!==$noTime){ echo'at'. $time;} else{}  ?></p>
+                                       
+                                       
+                                        
+		                    </div>  
+                <?php }else { ?>
+		                     
+                                    <div class="eventTitle">
+		                       
+                                        <h4 style="margin:0px; padding:0px;"><?php echo mb_strimwidth($sideEvent->title, 0, 37, "..."); ?></h4>
+                                        <p style="margin:0px; padding:0px;">On <?php echo $date;  ?> <?php if($setTime!==$noTime){ echo'at'. $time;} else{}  ?></p>
                                        
                                        
                                         
 		                    </div> 
-                                    
-		                     
+		           <?php } ?>          
                                           
-		                </div></a>
+		                
        </div>
-                            <?php } ?>
-                  </div> 
+          </a>                  <?php }}else {}  ?>
+                   
                   
                   
+              <div class="event"><h3>Find Us On Facebook</h3></div>     
                   
+                  <iframe src="//www.facebook.com/plugins/likebox.php?href=https%3A%2F%2Fwww.facebook.com%2Fchitwangaidalodge&amp;width&amp;height=290&amp;colorscheme=light&amp;show_faces=true&amp;header=true&amp;stream=false&amp;show_border=true" scrolling="no" frameborder="0" style="border:none; overflow:hidden; height:290px; width: 100%;" allowTransparency="true"></iframe>         
                   
-                  <iframe src="//www.facebook.com/plugins/likebox.php?href=https%3A%2F%2Fwww.facebook.com%2Fchitwangaidalodge&amp;width&amp;height=290&amp;colorscheme=light&amp;show_faces=true&amp;header=true&amp;stream=false&amp;show_border=true" scrolling="no" frameborder="0" style="border:none; overflow:hidden; height:290px;" allowTransparency="true"></iframe>         
-                  
-<!--            <img src="<?php echo base_url(); ?>contents/images/tripAdvisor.png" /> -->
+ <div class="event"><h3>Rate On Tripadvisor</h3></div> 
 
                   <div id="TA_cdswritereviewlg691" class="TA_cdswritereviewlg">
 <ul id="iz4U9Q18BmO" class="TA_links EvFsAuef">
@@ -133,7 +150,7 @@
 </li>
 </ul>
 </div>
-<script src="http://www.jscache.com/wejs?wtype=cdswritereviewlg&amp;uniq=691&amp;locationId=2083553&amp;lang=en_US&amp;border=true"></script>
+<script src="http://www.jscache.com/wejs?wtype=cdswritereviewlg&amp;uniq=691&amp;locationId=2083553&amp;width&amp;height=290&amp;lang=en_US&amp;border=true"></script>
 
                   
                   

@@ -13,12 +13,12 @@
         margin-left: 15px;  
 
         /* additional features, can be omitted */
-        border:2px solid #ff0000;  	
+         	
         padding:25px;  
         font-size:15px;  
-        -moz-box-shadow: 0 0 5px #ff0000;
-        -webkit-box-shadow: 0 0 5px #ff0000;
-        box-shadow: 0 0 5px #ff0000;
+        -moz-box-shadow: 0 0 3px #ccc;
+        -webkit-box-shadow: 0 0 3px #ccc;
+        box-shadow: 0 0 3px #ccc;
 
     }
     a{  
@@ -87,6 +87,7 @@ if(isset($selectedalbumquery))
  <div class="title-background">
     <h1 class="page_title"><?php echo $title.'>> '; ?>Photos</h1>
  </div>
+<div class="content">
     <?php
 foreach ($selectedalbumquery as $data) {
     
@@ -114,8 +115,10 @@ else
  <?php }
 ?>
 <div id="popup_box">	<!-- OUR PopupBox DIV-->
-<img  src="" width="500px" height="400px" id="pqr"  />
- <a id="popupBoxClose">Close</a>	
+<img  src="" width="500" height="400" id="pqr"  />
+ <a id="popupBoxClose">Close</a>
+ <div ><a id="next">Next</a>
+ <a id="previous">Previous</a></div>
 </div>
 <div class="clear"></div>
 </div>

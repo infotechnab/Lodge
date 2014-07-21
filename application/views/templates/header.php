@@ -30,7 +30,8 @@
         <script src="<?php echo base_url() . "contents/uploads/scripts/popup.js"; ?>"></script>
         <script src="<?php echo base_url() . "contents/uploads/scripts/jquery.js"; ?>"></script>
         <link rel="stylesheet" href="<?php echo base_url() . "contents/uploads/styles/tableStyles.css"; ?>"> 
-        <link rel="stylesheet" href="<?php echo base_url() . "contents/uploads/styles/pop-up-booking.css"; ?>"> 
+        <link rel="stylesheet" href="<?php echo base_url() . "contents/uploads/styles/pop-up-booking.css"; ?>">
+        <link rel="stylesheet" href="<?php echo base_url() . "contents/uploads/styles/tripadvisor.css"; ?>">
        
         
 
@@ -131,7 +132,57 @@
                     <a href="<?php echo base_url().'index.php/home/location' ?>"><li>Location</li></a>-->
                                    </ul>
             </div>         
-            <div id="search"><img src="<?php echo base_url(); ?>contents/uploads/images/ic_action_search.png" /> </div>
+            <div id="search">
+<!--                <img src="<?php echo base_url(); ?>contents/uploads/images/ic_action_search.png" /> -->
+<script>
+  (function() {
+    var cx = '003019572812212623629:qfw16gumyik';
+    var gcse = document.createElement('script');
+    gcse.type = 'text/javascript';
+    gcse.async = true;
+    gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
+        '//www.google.com/cse/cse.js?cx=' + cx;
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(gcse, s);
+  })();
+</script>
+<style>
+    .gsc-search-box td.gsc-search-button
+    {
+        display: none;
+    }
+    
+    .cse .gsc-control-cse, .gsc-control-cse {
+    padding: 0px;
+    margin: 0px -10px 0px 0px;
+    width: 99%;
+    max-height: 0px;
+}
+#___gcse_0
+{
+    width:90%;
+    margin: 0px -40px 0px 0px;
+    padding: 10px 10px 0px 0px;
+}
+.gsc-control-wrapper-cse{
+    width: 150%;
+    margin: 0px 12px 0px -53px;
+}
+.gsc-control-cse gsc-control-cse-en
+{
+   display: none; 
+}
+.gsc-search-box-tools .gsc-search-box .gsc-input {
+    padding: 0px;
+}
+form.gsc-search-box {
+    font-size: 13px;
+    margin: -2px 0 4px;
+    width: 106%;
+}
+</style>
+<gcse:search></gcse:search>
+            </div>
         </div>
             
          <!-- slider div with navigation and header image is closed here-->   

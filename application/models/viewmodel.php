@@ -246,14 +246,15 @@ class Viewmodel extends CI_Model
         {
             $this->db->select();            
             $this->db->where('media_association_id',$aid);
-            
-            $this->db->limit(1);
-                    $query = $this->db->get('media');
-           if ($query->num_rows() == 1) {
-            return $query->result();
-        } else {
-            return false;
-        }
+            $query = $this->db->get('media');
+        return $query->result();
+            //$this->db->limit(1);
+          //          $query = $this->db->get('media');
+        //   if ($query->num_rows() == 1) {
+       //     return $query->result();
+       // } else {
+       //     return false;
+      //  }
         }
 
         
@@ -263,7 +264,11 @@ class Viewmodel extends CI_Model
         return $query->result();
     }
         
-    
+     public function get_all_events(){
+        $this->db->order_by('date','DESC');
+         $query = $this->db->get('events');
+        return $query->result();
+    }
  
         
 }

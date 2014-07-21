@@ -1,5 +1,3 @@
-<div id='content'>
-    <!-- from slider starts-->
 <?php
 if(!empty($events)){
     foreach($events as $event){
@@ -24,32 +22,43 @@ if(!empty($events)){
 }
 
 ?>
+<div class="title-background">
+                            <h1> <?php echo $title; ?> </h1>
+                            
+                        </div>
 
-    <!-- the slider ends here-->
-
-    <div class='contentHeader'>    
-            
-        <h3> <?php echo $title; ?></h3>
-    </div>
-    
-    <div class="eventContainer">
+<div class='content'>
        <?php if (strlen($image)>2) {
     ?>
                 <div class='eventSingleImage'>
-                <img src="<?php echo base_url() . "content/uploads/images/" .$image; ?>" alt=""/>   
+                <img src="<?php echo base_url() . "contents/uploads/images/" .$image; ?>" alt=""/>   
             </div>
 
 <?php } ?> 
-        <div class='eventDetails'>
-                    <h4 style="color: #5D5D5D;"><?php echo $date; ?> <?php echo $fullTime; ?></h4>
-                    <h4><?php echo $location; ?></h4>
+         <div class="eventTitleSingle">    
+            
+        <h3> <?php echo $title; ?></h3>
+        
+    </div>
+    
+    <div class="eventTime">    
+            
+       <h4><?php echo $date; ?> <?php echo $fullTime; ?></h4>
+        
+    </div>
+    
+     <div class="eventTitleSingle">    
+            
+      <h4><?php echo $location; ?></h4>
                     <p><?php echo $details; ?></p>
+        
     </div>
-    </div>
+      
+   
 
    
       
 </div>
-
+<div class="clear"></div>
 <!-- left side content closed here -->
  
