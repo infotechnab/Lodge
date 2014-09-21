@@ -1,5 +1,5 @@
 <?php
-
+/*
 if (!defined('BASEPATH'))
     exit('No direct script access allowed');
 
@@ -158,5 +158,5 @@ class room_booking extends CI_Controller {
           
         }
         
-  }
+  } 
         

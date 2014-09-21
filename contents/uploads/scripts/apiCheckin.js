@@ -135,7 +135,7 @@ function changeFunc() {
             'checkout': checkout,
             'adult': adult,
             'child': child,
-            'hotelId': "0"
+            'hotelId': "1"
         },
         success: function(msg)
         {

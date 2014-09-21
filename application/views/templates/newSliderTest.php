@@ -109,7 +109,7 @@
 
             .nav {
                 display:block;
-                //text-indent:-10000px;
+                
                 position:relative;
                 cursor:pointer;
             }
